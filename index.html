@@ -37,7 +37,7 @@
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(255,255,255,0.95);
+    background: rgba(240,248,245,0.97);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     padding: 0 2rem;
@@ -361,15 +361,38 @@
   }
   .project-arrow {
     position: absolute; top: 1.5rem; right: 1.5rem;
-    width: 28px; height: 28px;
-    border: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .project-icon-link {
+    width: 32px; height: 32px;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    color: var(--faint);
-    font-size: 0.75rem;
     transition: all 0.2s;
+    text-decoration: none;
+    flex-shrink: 0;
   }
-  .project-card:hover .project-arrow { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .project-icon-link.github-link {
+    background: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    color: #fff;
+  }
+  .project-icon-link.github-link:hover { background: #333; border-color: #333; }
+  .project-icon-link.github-link svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 1.8; }
+  .project-icon-link.streamlit-link {
+    background: #ff4b4b;
+    border: 1px solid #ff4b4b;
+    color: #fff;
+  }
+  .project-icon-link.streamlit-link:hover { background: #e03131; border-color: #e03131; }
+  .project-icon-link.streamlit-link svg { width: 16px; height: 16px; fill: #fff; stroke: none; }
+  .project-icon-link.placeholder-link { opacity: 0.35; cursor: default; pointer-events: none; }
+  .project-icon-link.slides-link {
+    background: #c1440e;
+    border: 1px solid #c1440e;
+    color: #fff;
+  }
+  .project-icon-link.slides-link:hover { background: #a33a0c; border-color: #a33a0c; }
+  .project-icon-link.slides-link svg { width: 15px; height: 15px; stroke: #fff; fill: none; stroke-width: 1.8; }
 
   /* EXPERIENCE */
   #experience { background: var(--surface); }
@@ -480,7 +503,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="Supriya_Gir_CV.pdf" download style="color:var(--teal); border:1px solid var(--teal); padding:0.3rem 0.85rem; border-radius:2px; letter-spacing:0.06em;">Download CV</a></li>
+    <li><a href="files/Supriya_Gir_CV.pdf" download style="color:var(--teal); border:1px solid var(--teal); padding:0.3rem 0.85rem; border-radius:2px; letter-spacing:0.06em;">Download CV</a></li>
   </ul>
 </nav>
 
@@ -587,6 +610,9 @@
         <div class="skill-tags">
           <span class="skill-tag">Power BI</span>
           <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Tableau Advanced</span>
+          <span class="skill-tag">Data Storytelling</span>
+          <span class="skill-tag">Python Visualization</span>
           <span class="skill-tag">Streamlit</span>
           <span class="skill-tag">Excel</span>
         </div>
@@ -602,6 +628,9 @@
           <span class="skill-tag">NumPy</span>
           <span class="skill-tag">Scikit-learn</span>
           <span class="skill-tag">Seaborn</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Web Scraping</span>
+          <span class="skill-tag">APIs</span>
         </div>
       </div>
       <div class="skill-card">
@@ -615,6 +644,8 @@
           <span class="skill-tag">DB2</span>
           <span class="skill-tag">CTEs</span>
           <span class="skill-tag">Window Functions</span>
+          <span class="skill-tag">SQL Joins &amp; Subqueries</span>
+          <span class="skill-tag">SQL-Python Integration</span>
         </div>
       </div>
       <div class="skill-card">
@@ -628,6 +659,10 @@
           <span class="skill-tag">A/B Testing</span>
           <span class="skill-tag">ETL</span>
           <span class="skill-tag">Feature Engineering</span>
+          <span class="skill-tag">Hypothesis Testing</span>
+          <span class="skill-tag">Statistical Concepts</span>
+          <span class="skill-tag">Univariate &amp; Bivariate Analysis</span>
+          <span class="skill-tag">Data Exploration</span>
         </div>
       </div>
       <div class="skill-card">
@@ -640,6 +675,10 @@
           <span class="skill-tag">KNN</span>
           <span class="skill-tag">Gradient Boosting</span>
           <span class="skill-tag">Unsupervised Learning</span>
+          <span class="skill-tag">Supervised Learning</span>
+          <span class="skill-tag">Ensemble Methods</span>
+          <span class="skill-tag">Hyperparameter Tuning</span>
+          <span class="skill-tag">Imbalanced Datasets</span>
         </div>
       </div>
       <div class="skill-card">
@@ -652,6 +691,9 @@
           <span class="skill-tag">Power Automate</span>
           <span class="skill-tag">GitHub</span>
           <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Cloud Computing</span>
+          <span class="skill-tag">Git Collaboration</span>
+          <span class="skill-tag">Environments</span>
         </div>
       </div>
     </div>
@@ -666,7 +708,17 @@
     <div class="projects-grid">
 
       <div class="project-card">
-        <div class="project-arrow">↗</div>
+        <div class="project-arrow">
+          <a href="presentations/Mental_Health_MLProject.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
+          </a>
+          <a href="https://mentalhealthmlproject.streamlit.app" target="_blank" class="project-icon-link streamlit-link" title="Live Streamlit App">
+            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M27.8 17.6L14.7 1.1c-.3-.4-.9-.4-1.3 0L.2 17.6c-.3.4-.1 1 .4 1.1l13.1 3.5c.2.1.4.1.6 0l13.1-3.5c.5-.1.7-.7.4-1.1z" fill="#fff"/><path d="M27.8 21.2l-3.9-1c-.3-.1-.5.2-.4.5l.8 2.4c.1.3-.2.5-.4.4L14 20.2l-9.9 3.3c-.3.1-.5-.1-.4-.4l.8-2.4c.1-.3-.1-.5-.4-.5l-3.9 1c-.5.1-.7.7-.3 1.1l13.5 6.1c.2.1.5.1.7 0l13.5-6.1c.4-.3.3-.9-.8-1.1z" fill="#fff" opacity=".7"/></svg>
+          </a>
+          <a href="https://github.com/SupriyaGiri14/Mental_Health_ML_Project" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
         <div class="project-num">01</div>
         <h3>Mental Health in Tech — Employee Stress Prediction</h3>
         <p>End-to-end ML pipeline predicting employee stress levels from survey data. Achieved 80.95% accuracy with Random Forest. Deployed as a live Streamlit app for real-time support recommendations.</p>
@@ -682,7 +734,14 @@
       </div>
 
       <div class="project-card">
-        <div class="project-arrow">↗</div>
+        <div class="project-arrow">
+          <a href="presentations/USA Hospitals EDA.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
+          </a>
+          <a href="https://github.com/SupriyaGiri14/US_Hospital_Cost_And_Quality_Analysis" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
         <div class="project-num">02</div>
         <h3>US Hospital Cost &amp; Quality Analysis</h3>
         <p>Analyzed 1.5M+ Medicare-certified hospital records to surface relationships between care quality, pricing, and reimbursement. Identified "Hidden Gem" hospitals: 5-star quality at below-average cost.</p>
@@ -695,7 +754,17 @@
       </div>
 
       <div class="project-card">
-        <div class="project-arrow">↗</div>
+        <div class="project-arrow">
+          <a href="presentations/EV Market Project.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
+          </a>
+          <a href="https://ev-market-predictions.streamlit.app" target="_blank" class="project-icon-link streamlit-link" title="Live Streamlit App">
+            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M27.8 17.6L14.7 1.1c-.3-.4-.9-.4-1.3 0L.2 17.6c-.3.4-.1 1 .4 1.1l13.1 3.5c.2.1.4.1.6 0l13.1-3.5c.5-.1.7-.7.4-1.1z" fill="#fff"/><path d="M27.8 21.2l-3.9-1c-.3-.1-.5.2-.4.5l.8 2.4c.1.3-.2.5-.4.4L14 20.2l-9.9 3.3c-.3.1-.5-.1-.4-.4l.8-2.4c.1-.3-.1-.5-.4-.5l-3.9 1c-.5.1-.7.7-.3 1.1l13.5 6.1c.2.1.5.1.7 0l13.5-6.1c.4-.3.3-.9-.8-1.1z" fill="#fff" opacity=".7"/></svg>
+          </a>
+          <a href="https://github.com/SupriyaGiri14/Electric_Vehicles_EDA_And_Predictions" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
         <div class="project-num">03</div>
         <h3>Electric Vehicle Market Analysis</h3>
         <p>Explored EV market data to surface pricing trends, regional adoption patterns, and purchase drivers. Delivered interactive Power BI dashboards filterable by segment and geography.</p>
@@ -707,7 +776,17 @@
       </div>
 
       <div class="project-card">
-        <div class="project-arrow">↗</div>
+        <div class="project-arrow">
+          <a href="presentations/Book Recommender.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
+          </a>
+          <a href="#" class="project-icon-link streamlit-link placeholder-link" title="Streamlit App — coming soon">
+            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M27.8 17.6L14.7 1.1c-.3-.4-.9-.4-1.3 0L.2 17.6c-.3.4-.1 1 .4 1.1l13.1 3.5c.2.1.4.1.6 0l13.1-3.5c.5-.1.7-.7.4-1.1z" fill="#fff"/><path d="M27.8 21.2l-3.9-1c-.3-.1-.5.2-.4.5l.8 2.4c.1.3-.2.5-.4.4L14 20.2l-9.9 3.3c-.3.1-.5-.1-.4-.4l.8-2.4c.1-.3-.1-.5-.4-.5l-3.9 1c-.5.1-.7.7-.3 1.1l13.5 6.1c.2.1.5.1.7 0l13.5-6.1c.4-.3.3-.9-.8-1.1z" fill="#fff" opacity=".7"/></svg>
+          </a>
+          <a href="https://github.com/SupriyaGiri14/Book_Recommender" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
         <div class="project-num">04</div>
         <h3>Book Recommender Application</h3>
         <p>Personalized book recommendation app using collaborative filtering and content-based ML techniques. Deployed via Streamlit for live user interaction and discovery.</p>
@@ -720,7 +799,14 @@
       </div>
 
       <div class="project-card" style="grid-column: 1 / -1;">
-        <div class="project-arrow">↗</div>
+        <div class="project-arrow">
+          <a href="presentations/Satellite.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
+          </a>
+          <a href="https://github.com/SupriyaGiri14/Satellite_EDA" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
         <div class="project-num">05</div>
         <h3>Satellite Data Exploratory Analysis</h3>
         <p>EDA on global satellite datasets to analyze launch trends, orbital congestion, and long-term sustainability risks. Findings presented through interactive Power BI dashboards for stakeholder communication.</p>
