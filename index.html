@@ -361,10 +361,10 @@
   }
   .project-arrow {
     position: absolute; top: 1.5rem; right: 1.5rem;
-    display: flex; align-items: center; gap: 0.5rem;
+    display: flex; align-items: center; gap: 0.45rem;
   }
   .project-icon-link {
-    width: 32px; height: 32px;
+    width: 30px; height: 30px;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     transition: all 0.2s;
@@ -372,27 +372,30 @@
     flex-shrink: 0;
   }
   .project-icon-link.github-link {
-    background: #1a1a1a;
-    border: 1px solid #1a1a1a;
-    color: #fff;
+    background: transparent;
+    border: 1px solid #999;
+    color: #555;
   }
-  .project-icon-link.github-link:hover { background: #333; border-color: #333; }
-  .project-icon-link.github-link svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 1.8; }
+  .project-icon-link.github-link:hover { background: #1a1a1a; border-color: #1a1a1a; color: #fff; }
+  .project-icon-link.github-link svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; }
   .project-icon-link.streamlit-link {
-    background: #ff4b4b;
-    border: 1px solid #ff4b4b;
-    color: #fff;
+    background: transparent;
+    border: 1px solid #ff8080;
+    color: #ff8080;
   }
-  .project-icon-link.streamlit-link:hover { background: #e03131; border-color: #e03131; }
-  .project-icon-link.streamlit-link svg { width: 16px; height: 16px; fill: #fff; stroke: none; }
-  .project-icon-link.placeholder-link { opacity: 0.35; cursor: default; pointer-events: none; }
+  .project-icon-link.streamlit-link:hover { background: #ff4b4b; border-color: #ff4b4b; }
+  .project-icon-link.streamlit-link svg { width: 16px; height: 16px; }
+  .project-icon-link.streamlit-link svg path { transition: fill 0.2s; }
+  .project-icon-link.streamlit-link:not(:hover) svg path { fill: #ff8080 !important; opacity: 1; }
+  .project-icon-link.streamlit-link:hover svg path { fill: #fff !important; opacity: 1; }
+  .project-icon-link.placeholder-link { opacity: 0.3; cursor: default; pointer-events: none; }
   .project-icon-link.slides-link {
-    background: #c1440e;
-    border: 1px solid #c1440e;
-    color: #fff;
+    background: transparent;
+    border: 1px solid #d07050;
+    color: #d07050;
   }
-  .project-icon-link.slides-link:hover { background: #a33a0c; border-color: #a33a0c; }
-  .project-icon-link.slides-link svg { width: 15px; height: 15px; stroke: #fff; fill: none; stroke-width: 1.8; }
+  .project-icon-link.slides-link:hover { background: #c1440e; border-color: #c1440e; color: #fff; }
+  .project-icon-link.slides-link svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; }
 
   /* EXPERIENCE */
   #experience { background: var(--surface); }
@@ -503,7 +506,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="files/Supriya_Gir_CV.pdf" download style="color:var(--teal); border:1px solid var(--teal); padding:0.3rem 0.85rem; border-radius:2px; letter-spacing:0.06em;">Download CV</a></li>
+    <li><a href="files/supriya-gir_data_analyst_2026.docx" download style="color:var(--teal); border:1px solid var(--teal); padding:0.3rem 0.85rem; border-radius:2px; letter-spacing:0.06em;">Download CV</a></li>
   </ul>
 </nav>
 
@@ -516,7 +519,7 @@
    </div>
   
   </div>
-  <p class="hero-title">Business Analytics &amp; Operations</p>
+  
   <p class="hero-desc">I'm a data analyst with a background in software development — which means I understand how data is created, stored, and structured before it ever reaches a dashboard. That context shapes how I work.</p>
   <div class="hero-ctas">
       <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -709,11 +712,11 @@
 
       <div class="project-card">
         <div class="project-arrow">
-          <a href="presentations/Mental_Health_MLProject.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+          <a href="https://docs.google.com/presentation/d/1iKWQ6Ght_SB6Xrrl-zjmIRumpzWT2EPr/edit?usp=drive_link&ouid=102501106981086246907&rtpof=true&sd=true" target="_blank" class="project-icon-link slides-link" title="View Presentation">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
           </a>
           <a href="https://mentalhealthmlproject.streamlit.app" target="_blank" class="project-icon-link streamlit-link" title="Live Streamlit App">
-            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M27.8 17.6L14.7 1.1c-.3-.4-.9-.4-1.3 0L.2 17.6c-.3.4-.1 1 .4 1.1l13.1 3.5c.2.1.4.1.6 0l13.1-3.5c.5-.1.7-.7.4-1.1z" fill="#fff"/><path d="M27.8 21.2l-3.9-1c-.3-.1-.5.2-.4.5l.8 2.4c.1.3-.2.5-.4.4L14 20.2l-9.9 3.3c-.3.1-.5-.1-.4-.4l.8-2.4c.1-.3-.1-.5-.4-.5l-3.9 1c-.5.1-.7.7-.3 1.1l13.5 6.1c.2.1.5.1.7 0l13.5-6.1c.4-.3.3-.9-.8-1.1z" fill="#fff" opacity=".7"/></svg>
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M27.6 13.4L16.8 2.1a1.2 1.2 0 0 0-1.6 0L4.4 13.4a1.2 1.2 0 0 0 .3 1.9l5.4 2.5a1.2 1.2 0 0 0 1.3-.2l5.6-5.3 5.6 5.3a1.2 1.2 0 0 0 1.3.2l5.4-2.5a1.2 1.2 0 0 0 .3-1.9z" fill="currentColor"/><path d="M27.6 19.8l-5.4-2.5a1.2 1.2 0 0 0-1.3.2L16 22.6l-4.9-5.1a1.2 1.2 0 0 0-1.3-.2l-5.4 2.5a1.2 1.2 0 0 0-.3 1.9l10.8 10.2a1.2 1.2 0 0 0 1.6 0L27.9 21.7a1.2 1.2 0 0 0-.3-1.9z" fill="currentColor" opacity="0.65"/></svg>
           </a>
           <a href="https://github.com/SupriyaGiri14/Mental_Health_ML_Project" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
             <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -735,7 +738,7 @@
 
       <div class="project-card">
         <div class="project-arrow">
-          <a href="presentations/USA Hospitals EDA.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+          <a href="https://docs.google.com/presentation/d/1q8_o6PNYX8YZe32i6cuN54rV0JQtKfT2/edit?usp=drive_link&ouid=102501106981086246907&rtpof=true&sd=true" target="_blank" class="project-icon-link slides-link" title="View Presentation">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
           </a>
           <a href="https://github.com/SupriyaGiri14/US_Hospital_Cost_And_Quality_Analysis" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
@@ -755,11 +758,11 @@
 
       <div class="project-card">
         <div class="project-arrow">
-          <a href="presentations/EV Market Project.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+          <a href="https://docs.google.com/presentation/d/1rVv8nTkUuVIdCasql3cjA7c3MF15DvC9/edit?usp=drive_link&ouid=102501106981086246907&rtpof=true&sd=true" target="_blank" class="project-icon-link slides-link" title="View Presentation">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
           </a>
           <a href="https://ev-market-predictions.streamlit.app" target="_blank" class="project-icon-link streamlit-link" title="Live Streamlit App">
-            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M27.8 17.6L14.7 1.1c-.3-.4-.9-.4-1.3 0L.2 17.6c-.3.4-.1 1 .4 1.1l13.1 3.5c.2.1.4.1.6 0l13.1-3.5c.5-.1.7-.7.4-1.1z" fill="#fff"/><path d="M27.8 21.2l-3.9-1c-.3-.1-.5.2-.4.5l.8 2.4c.1.3-.2.5-.4.4L14 20.2l-9.9 3.3c-.3.1-.5-.1-.4-.4l.8-2.4c.1-.3-.1-.5-.4-.5l-3.9 1c-.5.1-.7.7-.3 1.1l13.5 6.1c.2.1.5.1.7 0l13.5-6.1c.4-.3.3-.9-.8-1.1z" fill="#fff" opacity=".7"/></svg>
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M27.6 13.4L16.8 2.1a1.2 1.2 0 0 0-1.6 0L4.4 13.4a1.2 1.2 0 0 0 .3 1.9l5.4 2.5a1.2 1.2 0 0 0 1.3-.2l5.6-5.3 5.6 5.3a1.2 1.2 0 0 0 1.3.2l5.4-2.5a1.2 1.2 0 0 0 .3-1.9z" fill="currentColor"/><path d="M27.6 19.8l-5.4-2.5a1.2 1.2 0 0 0-1.3.2L16 22.6l-4.9-5.1a1.2 1.2 0 0 0-1.3-.2l-5.4 2.5a1.2 1.2 0 0 0-.3 1.9l10.8 10.2a1.2 1.2 0 0 0 1.6 0L27.9 21.7a1.2 1.2 0 0 0-.3-1.9z" fill="currentColor" opacity="0.65"/></svg>
           </a>
           <a href="https://github.com/SupriyaGiri14/Electric_Vehicles_EDA_And_Predictions" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
             <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -777,11 +780,11 @@
 
       <div class="project-card">
         <div class="project-arrow">
-          <a href="presentations/Book Recommender.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+          <a href="https://docs.google.com/presentation/d/1wS1fTyfssJO3zkq6Q7sxCue7PnRbIdyJ/edit?usp=drive_link&ouid=102501106981086246907&rtpof=true&sd=true" target="_blank" class="project-icon-link slides-link" title="View Presentation">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
           </a>
           <a href="#" class="project-icon-link streamlit-link placeholder-link" title="Streamlit App — coming soon">
-            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M27.8 17.6L14.7 1.1c-.3-.4-.9-.4-1.3 0L.2 17.6c-.3.4-.1 1 .4 1.1l13.1 3.5c.2.1.4.1.6 0l13.1-3.5c.5-.1.7-.7.4-1.1z" fill="#fff"/><path d="M27.8 21.2l-3.9-1c-.3-.1-.5.2-.4.5l.8 2.4c.1.3-.2.5-.4.4L14 20.2l-9.9 3.3c-.3.1-.5-.1-.4-.4l.8-2.4c.1-.3-.1-.5-.4-.5l-3.9 1c-.5.1-.7.7-.3 1.1l13.5 6.1c.2.1.5.1.7 0l13.5-6.1c.4-.3.3-.9-.8-1.1z" fill="#fff" opacity=".7"/></svg>
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M27.6 13.4L16.8 2.1a1.2 1.2 0 0 0-1.6 0L4.4 13.4a1.2 1.2 0 0 0 .3 1.9l5.4 2.5a1.2 1.2 0 0 0 1.3-.2l5.6-5.3 5.6 5.3a1.2 1.2 0 0 0 1.3.2l5.4-2.5a1.2 1.2 0 0 0 .3-1.9z" fill="currentColor"/><path d="M27.6 19.8l-5.4-2.5a1.2 1.2 0 0 0-1.3.2L16 22.6l-4.9-5.1a1.2 1.2 0 0 0-1.3-.2l-5.4 2.5a1.2 1.2 0 0 0-.3 1.9l10.8 10.2a1.2 1.2 0 0 0 1.6 0L27.9 21.7a1.2 1.2 0 0 0-.3-1.9z" fill="currentColor" opacity="0.65"/></svg>
           </a>
           <a href="https://github.com/SupriyaGiri14/Book_Recommender" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
             <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -800,7 +803,7 @@
 
       <div class="project-card" style="grid-column: 1 / -1;">
         <div class="project-arrow">
-          <a href="presentations/Satellite.pptx" download class="project-icon-link slides-link" title="Download Presentation">
+          <a href="https://docs.google.com/presentation/d/1Nhu46ipN8v4Za3AiTIfk_YvYIUk17DXc/edit?usp=sharing&ouid=102501106981086246907&rtpof=true&sd=true" target="_blank" class="project-icon-link slides-link" title="View Presentation">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 8h3a2 2 0 0 1 0 4H9V8z"/></svg>
           </a>
           <a href="https://github.com/SupriyaGiri14/Satellite_EDA" target="_blank" class="project-icon-link github-link" title="GitHub Repo">
